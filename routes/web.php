@@ -24,7 +24,10 @@ Route::get('one-to-one-insert','OneToOneController@oneToOneInsert');
  * One To Many
  */
 Route::get('one-to-many','OneToManyController@oneToMany');
+Route::get('one-to-many-two','OneToManyController@oneToManyTwo');
 Route::get('one-to-many-inverse','OneToManyController@oneToManyInverse');
+Route::get('one-to-many-insert','OneToManyController@oneToManyInsert');
+Route::get('one-to-many-insert-two','OneToManyController@oneToManyInsertTwo');
 // Route::get('one-to-one-insert','OneToOneController@oneToOneInsert');
 
 Route::get('/', function () {
