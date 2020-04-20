@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\State;
 use Illuminate\Http\Request;
 
 class OneToManyController extends Controller
@@ -21,5 +22,15 @@ class OneToManyController extends Controller
                 echo $key->initials." - ".$key->name."<br>";
             }
         }
+    }
+
+    public function oneToManyInverse(){
+        $stateName = "Minas Gerais";
+
+        $state = State::where('name', $stateName)->get()->first();
+        echo $state->name;
+
+        $country = $state->country;
+        echo "<br>".$country->name;
     }
 }
