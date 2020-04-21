@@ -72,4 +72,16 @@ class OneToManyController extends Controller
         var_dump($insertState);
     }
 
+    public function hasManyThrough(){
+        $country = Country::find(1);
+
+        echo "<b>{$country->name}</b><br>";
+
+        $cities = $country->cities;
+
+        foreach ($cities as $city) {
+            echo "<li>{$city->name}</li>";
+        }
+    }
+
 }

@@ -30,6 +30,11 @@ Route::get('one-to-many-insert','OneToManyController@oneToManyInsert');
 Route::get('one-to-many-insert-two','OneToManyController@oneToManyInsertTwo');
 // Route::get('one-to-one-insert','OneToOneController@oneToOneInsert');
 
+/**
+ * Has Many Through
+ */
+Route::get('has-many-through','OneToManyController@hasManyThrough');
+
 Route::get('/', function () {
     return view('welcome');
 });
